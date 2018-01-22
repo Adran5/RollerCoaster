@@ -25,7 +25,7 @@
 		li {
 			margin: 2%;
 		}
-		#wrapper {
+		.wrapper {
 			padding: .5rem 1rem;
 			background: #e65a5d;
 			display: block;
@@ -34,12 +34,12 @@
 		button {
 			font-size: 1.5rem;
 		}
-/*
-		.bigger {
-			font-size: 4rem;
-			margin: 1rem 0;
+		img {
+			width: 70%;
 		}
-*/
+		body {
+			background: #d0eefb;
+		}
   </style>
 </head>
 <body>
@@ -58,9 +58,9 @@
 				<li>Take frequent breaks between roller coaster rides.</li>
 				<li>Never stand up while a ride is in motion.<a href="https://communitytable.parade.com/55888/hannah_dreyfus/10-roller-coaster-safety-tips-that-could-save-your-life/" target="_blank">*</a></li>
 			</ol>
-			<button id="wrapper" onclick="myFunction()">Ready to Ride</button>
+			<button class="wrapper" onclick="myFunction()">Ready to Ride</button>
 			<h1 id="bigger">Whee!</h1>
-			<img id="roller" src="" alt="roller coaster">
+			<img id="roller" class="wrapper" src="" alt="roller coaster">
 			
 		</section>
 	</div>
@@ -113,11 +113,14 @@
 
       // TODO: increment the counter
 			counter = counter + 1
-			// Change the h1 tag to red and increast font to 4rem    
+			// Change the h1 tag to red    
     	document.getElementsByTagName("h1")[0].setAttribute("class", "red"); 
-			document.getElementById("bigger").style.fontSize = "4rem";
-    } 
-		}
+			//	Increase h1 font size to 3rem
+				document.getElementById("bigger").style.fontSize = "3rem";
+			// jump to image tag
+			window.location.hash = "roller";
+    	} 
+			}
 			//	Set an alert after the loop has finished
 //			alert("Hope you enjoyed the ride!")
 		
